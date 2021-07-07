@@ -1,12 +1,12 @@
 <img src="../../assets/OpenFin-Workspace-Starter.png" width="100%" alt="OpenFin Workspace Example Application -- Adding your application the Content Discovery Service" />
 
-OpenFin Workspace is currently **only supported on Windows**.
+OpenFin Workspace is currently **supported only on Windows**.
 
 # Launch your Content in OpenFin Workspace
 
 OpenFin Workspace uses a **Content Discovery Service** to know which content and apps it can access.
 
-This application you are about to install is a simple example of plugging in your own content or app. This example assumes you have already [set up your development environment](https://developers.openfin.co/of-docs/docs/set-up-your-dev-environment)
+This application you are about to install is a simple example of plugging in your own content or app. This example assumes you have already [set up your development environment](https://developers.openfin.co/of-docs/docs/set-up-your-dev-environment). 
 
 ## Getting Started
 
@@ -23,10 +23,12 @@ $ npm run build
 ```
 
 3. Set Windows registry key for [Desktop Owner Settings](https://developers.openfin.co/docs/desktop-owner-settings).
-   This example includes a utility (`desktop-owner-settings.bat`) that adds the Windows registry key for you, pointing to a local desktop owner 
-   settings file so you can test these settings. If you already have a desktop owner settings file, this script prompts to overwrite the location. Be sure to capture the existing location so you can update the key when you are done using this example.
+   1. If you have previously installed OpenFin, make a note of the value of `HKEY_CURRENT_USER\Software\OpenFin\RVM\Settings\DesktopOwnerSettings`,
+      so you can restore it when you are done working with this project.
+   2. Run the script, `desktop-owner-settings.bat`, included in this project, which adds the Windows registry key for you, pointing to a local desktop owner 
+      settings file so you can test these settings. If you already have a desktop owner settings file, this script prompts to overwrite the location. 
 
-   (WARNING: This script kills all open OpenFin processes.)
+   :warning: This script kills all open OpenFin processes.
 
 ```bash
 $ npm run dos
